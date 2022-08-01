@@ -15,12 +15,14 @@
         </div>
       </div>
 
-      <div id="projects">
+      <div class="mb-3" id="projects">
         <h3 class="text-white">Проекты</h3>
 
-        <ProjectLAR v-for="project in projects" :project="project" :key="project.name">
-          <ProjectModal :project="project" />
-        </ProjectLAR>
+        <div class="row">
+          <ProjectLAR v-for="project in projects" :project="project" :key="project.name">
+            <ProjectModal :project="project" />
+          </ProjectLAR>
+        </div>
       </div>
     </div>
   </div>
@@ -101,6 +103,22 @@ export default {
           name: "LARSN",
           video: "/media/LARSN.e9e276ed.mp4",
           id: "larsn",
+          description: "Социальная сеть",
+          dateRelease: 2021,
+          linkProject: "",
+          linkSourceCode:
+            "https://github.com/viirtualp1/two-projects-for-ilearn/tree/main/Social-Network",
+          funcs: ["Доступность", "Скорость"],
+        },
+        {
+          name: "ITests",
+          imgs: ["https://i.ibb.co/WVMmxCd/1.png", "https://i.ibb.co/MPD9mZ5/2.png"],
+          id: "itests",
+          description: "Сервис для создания тестов",
+          dateRelease: 2020,
+          linkProject: "",
+          linkSourceCode: "https://github.com/viirtualp1/ITests",
+          funcs: ["Создание тестов", "Автоматическая проверка"],
         },
       ],
     };

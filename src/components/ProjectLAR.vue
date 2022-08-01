@@ -1,6 +1,8 @@
 <template>
-  <div class="card bg-dark text-white" style="width: 30rem">
-    <video :src="project.video" autoplay />
+  <div class="card bg-dark text-white">
+    <video v-if="project.video" :src="project.video" autoplay />
+    <img v-else :src="project.imgs[0]" alt="test" />
+
     <div class="card-img-overlay">
       <button class="btn card-title project-name" @click="openModal()">
         {{ project.name }}
@@ -35,6 +37,9 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+
   .card-img-overlay {
     text-align: left;
   }
